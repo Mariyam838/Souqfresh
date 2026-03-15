@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Souq Fresh — Dubai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ═══════════════ SPLASH SCREEN ═══════════════ -->
+<div id="splash">
+
+  <!-- Animated geometric background -->
+  <div class="splash-bg">
+    <div class="geo g1"></div>
+    <div class="geo g2"></div>
+    <div class="geo g3"></div>
+    <div class="geo g4"></div>
+    <div class="geo g5"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- Floating food items -->
+  <div class="float-items">
+    <span class="fi fi1">🥭</span>
+    <span class="fi fi2">🧀</span>
+    <span class="fi fi3">🍓</span>
+    <span class="fi fi4">🥦</span>
+    <span class="fi fi5">🍳</span>
+    <span class="fi fi6">🍇</span>
+    <span class="fi fi7">🥩</span>
+    <span class="fi fi8">🍞</span>
+  </div>
+
+  <!-- Center content -->
+  <div class="splash-center">
+    <!-- Logo mark -->
+    <div class="splash-logo-wrap">
+      <div class="logo-ring r1"></div>
+      <div class="logo-ring r2"></div>
+      <div class="logo-ring r3"></div>
+      <div class="logo-mark">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <path d="M26 4C14 4 5 13 5 25C5 38 15 44 26 48C37 44 47 38 47 25C47 13 38 4 26 4Z" fill="url(#lg1)"/>
+          <circle cx="26" cy="25" r="10" fill="#12100D"/>
+          <circle cx="26" cy="25" r="5" fill="url(#lg2)"/>
+          <defs>
+            <radialGradient id="lg1" cx="40%" cy="30%">
+              <stop offset="0%" stop-color="#E8CB78"/>
+              <stop offset="100%" stop-color="#8A5E1A"/>
+            </radialGradient>
+            <radialGradient id="lg2" cx="30%" cy="30%">
+              <stop offset="0%" stop-color="#FFF0B0"/>
+              <stop offset="100%" stop-color="#C9A84C"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Brand name -->
+    <div class="splash-brand">
+      <div class="splash-name">Souq Fresh</div>
+      <div class="splash-tagline">
+        <span class="tag-line"></span>
+        <span class="tag-text">Dubai's Finest Grocery</span>
+        <span class="tag-line"></span>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="splash-stats">
+      <div class="stat-item">
+        <div class="stat-num">80+</div>
+        <div class="stat-lbl">Products</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num">8</div>
+        <div class="stat-lbl">Categories</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num">30</div>
+        <div class="stat-lbl">Min Delivery</div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="splash-features">
+      <div class="feat"><span class="feat-ico">✦</span> 100% Halal Certified</div>
+      <div class="feat"><span class="feat-ico">✦</span> Farm Fresh Daily</div>
+      <div class="feat"><span class="feat-ico">✦</span> Dubai Marina Coverage</div>
+    </div>
+
+    <!-- CTA Button -->
+    <button class="splash-cta" onclick="enterApp()">
+      <span class="cta-text">Start Shopping</span>
+      <span class="cta-arrow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </span>
+    </button>
+
+    <div class="splash-footer">Free delivery on orders over AED 150</div>
+  </div>
+
+</div>
+<!-- ═══════════════ END SPLASH ═══════════════ -->
+
+
+<!-- ═══════════════ MAIN APP ═══════════════ -->
+<div id="app" class="app-hidden">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="brand-logo">
+          <svg width="30" height="30" viewBox="0 0 52 52" fill="none">
+            <path d="M26 4C14 4 5 13 5 25C5 38 15 44 26 48C37 44 47 38 47 25C47 13 38 4 26 4Z" fill="url(#hg1)"/>
+            <circle cx="26" cy="25" r="10" fill="#12100D"/>
+            <circle cx="26" cy="25" r="5" fill="url(#hg2)"/>
+            <defs>
+              <radialGradient id="hg1" cx="40%" cy="30%">
+                <stop offset="0%" stop-color="#E8CB78"/>
+                <stop offset="100%" stop-color="#8A5E1A"/>
+              </radialGradient>
+              <radialGradient id="hg2">
+                <stop offset="0%" stop-color="#FFF0B0"/>
+                <stop offset="100%" stop-color="#C9A84C"/>
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Souq Fresh</div>
+          <div class="brand-loc">&#x1F4CD; Dubai Marina · 25–35 min</div>
+        </div>
+      </div>
+      <button class="cart-btn" id="cart-btn" onclick="openCart()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span id="cart-label">Cart</span>
+        <div class="cart-badge" id="cart-count">0</div>
+      </button>
+    </div>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <svg class="search-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="search" class="search-input" placeholder="Search mangoes, halloumi, lamb chops…" oninput="loadProducts()">
+      </div>
+    </div>
+
+    <div class="cats-scroll">
+      <div class="cats-inner" id="cats">
+        {% for cat in categories %}
+        <button class="cat-pill{% if loop.first %} active{% endif %}" data-cat="{{ cat }}" onclick="setCategory('{{ cat }}', this)">{{ cat }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero-banner">
+    <div class="hero-left">
+      <div class="hero-badge">&#x2728; Ramadan Kareem 2025</div>
+      <h1 class="hero-title">Fresh. Halal.<br><em>Delivered.</em></h1>
+      <p class="hero-sub">80 products · 8 categories · all of Dubai</p>
+    </div>
+    <div class="hero-icons">
+      <span>🥭</span><span>🥩</span><span>🧀</span><span>🍞</span>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="products-wrap">
+    <div class="section-hd">
+      <span class="section-title" id="section-title">All Products</span>
+      <span class="section-count" id="section-count"></span>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div id="no-results" class="no-results" style="display:none">
+      <div style="font-size:40px;margin-bottom:12px">🔍</div>
+      <div>No products found</div>
+      <div style="font-size:13px;margin-top:6px;opacity:0.5">Try a different search or category</div>
+    </div>
+  </div>
+  <div style="height:50px"></div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="drawer-header">
+    <div class="drawer-title">Your Basket</div>
+    <button class="drawer-close" onclick="closeCart()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="cart-items"></div>
+  <div class="drawer-footer" id="cart-footer"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ORDER SUCCESS MODAL -->
+<div class="order-backdrop" id="order-backdrop"></div>
+<div class="order-modal" id="order-modal">
+  <div class="order-checkmark">
+    <svg class="check-svg" viewBox="0 0 52 52">
+      <circle class="check-circle" cx="26" cy="26" r="24" fill="none" stroke="#C9A84C" stroke-width="2"/>
+      <path class="check-tick" fill="none" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 26l8 9 16-18"/>
+    </svg>
+  </div>
+  <div class="order-title">Order Placed!</div>
+  <div class="order-sub">Your fresh groceries are on their way</div>
+  <div class="order-details" id="order-details"></div>
+  <div class="order-eta">
+    <div class="eta-icon">🚚</div>
+    <div>
+      <div class="eta-label">Estimated Delivery</div>
+      <div class="eta-time">25 – 35 minutes</div>
+    </div>
+  </div>
+  <div class="order-track">Dubai Marina · Tracking #<span id="order-id"></span></div>
+  <button class="order-close-btn" onclick="closeOrderModal()">Continue Shopping</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
